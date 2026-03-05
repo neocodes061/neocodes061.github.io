@@ -50,6 +50,6 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.why-card, .pricing-card, .demo-card, .step').forEach((el, i) => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
-  el.style.transition = `opacity 0.8s ease ${i * 0.9}s, transform 0.8s ease ${i * 0.07}s`;
+  el.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
   observer.observe(el);
 });
