@@ -1,0 +1,513 @@
+/* =============================================
+   COMPONENTS.CSS — UI Elements & Components
+   NeoCodes Launch
+============================================= */
+
+/* --- Logo --- */
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+.logo span { color: var(--accent); }
+
+/* --- Nav CTA --- */
+.nav-cta {
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 4px;
+  transition: opacity var(--t);
+}
+.nav-cta:hover { opacity: 0.85; }
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--accent);
+  color: var(--dark);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 4px;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(232, 255, 71, 0.3);
+}
+
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.8rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: border-color var(--t), background var(--t);
+}
+.btn-secondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Hero Background Effects --- */
+.hero-grid-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(232, 255, 71, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(232, 255, 71, 0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-glow {
+  position: absolute; top: -10%; right: -5%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(71, 200, 255, 0.12) 0%, transparent 65%);
+  z-index: 0;
+}
+
+.hero-glow2 {
+  position: absolute; bottom: 5%; left: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(232, 255, 71, 0.07) 0%, transparent 65%);
+  z-index: 0;
+}
+
+/* --- Hero Eyebrow Pill --- */
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: rgba(232, 255, 71, 0.1);
+  border: 1px solid rgba(232, 255, 71, 0.25);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2px;
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.1s forwards;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+
+/* --- Hero Heading --- */
+.hero h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.2s forwards;
+}
+
+.hero h1 em   { font-style: normal; color: var(--accent); }
+.hero h1 .line2 { color: var(--accent2); }
+
+.hero-sub {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.6;
+  max-width: 520px;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.35s forwards;
+}
+
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp 0.6s 0.5s forwards;
+}
+
+.hero-stats {
+  opacity: 0;
+  animation: fadeUp 0.6s 0.65s forwards;
+}
+
+.stat-val {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+.stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+
+/* --- Why / Education Cards --- */
+.why-card {
+  background: var(--dark2);
+  padding: 2.5rem;
+  transition: background var(--t);
+}
+.why-card:hover { background: var(--dark3); }
+
+.why-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+
+.why-card h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  color: var(--white);
+}
+.why-card p { font-size: 0.9rem; color: rgba(255, 255, 255, 0.5); line-height: 1.6; }
+
+/* --- How It Works Steps --- */
+.step-num {
+  width: 52px; height: 52px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  background: rgba(232, 255, 71, 0.05);
+}
+
+.step h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+.step p { font-size: 0.88rem; color: rgba(255, 255, 255, 0.5); line-height: 1.6; }
+
+/* --- Pricing Cards --- */
+.pricing-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.2rem;
+  position: relative;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured card — dark on light section */
+.pricing-card.featured {
+  background: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+}
+
+.badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--accent);
+  color: var(--dark);
+  font-size: 0.7rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 0.25rem 0.9rem;
+  border-radius: 2px;
+  white-space: nowrap;
+}
+
+.tier-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+.pricing-card.featured .tier-name { color: rgba(255, 255, 255, 0.5); }
+
+.price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.6rem;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+  color: var(--dark);
+}
+.pricing-card.featured .price { color: var(--white); }
+
+.price-note {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.pricing-card.featured .price-note { color: rgba(255, 255, 255, 0.4); }
+
+.price-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 1.5rem 0;
+}
+.pricing-card.featured .price-divider { background: rgba(255, 255, 255, 0.1); }
+
+.feature-list {
+  display: flex; flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.feature-list li {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: #444;
+}
+.pricing-card.featured .feature-list li { color: rgba(255, 255, 255, 0.75); }
+
+.feature-list li::before {
+  content: '✓';
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.82rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+/* On light cards, make tick darker since accent is light */
+.pricing-card:not(.featured) .feature-list li::before { color: #7ab800; }
+
+.btn-tier {
+  display: block; text-align: center;
+  background: var(--dark);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.8rem;
+  border-radius: 4px;
+  transition: opacity var(--t);
+}
+.btn-tier:hover { opacity: 0.8; }
+
+.pricing-card.featured .btn-tier {
+  background: var(--accent);
+  color: var(--dark);
+}
+
+.annual-note {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  color: #999;
+}
+
+/* --- Demo Cards --- */
+.demo-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color var(--t), transform var(--t);
+}
+.demo-card:hover {
+  border-color: rgba(232, 255, 71, 0.3);
+  transform: translateY(-3px);
+}
+
+.demo-thumb {
+  height: 180px;
+  background: linear-gradient(135deg, #1a1a24 0%, #12121a 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative; overflow: hidden;
+}
+.demo-thumb::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.demo-info { padding: 1.5rem; }
+
+.demo-tier {
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.4rem;
+}
+
+.demo-info h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.demo-info p {
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.demo-link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.82rem; font-weight: 600;
+  color: var(--accent2);
+  transition: gap var(--t);
+}
+.demo-link:hover { gap: 0.7rem; }
+
+/* --- Contact Form --- */
+.contact-info h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: var(--dark);
+}
+
+.contact-info p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.wa-btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: #25D366;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 4px;
+  transition: transform var(--t), box-shadow var(--t);
+}
+.wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+}
+.wa-icon { font-size: 1.2rem; }
+
+form { display: flex; flex-direction: column; gap: 1rem; }
+
+label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #555;
+  display: block;
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+input, select, textarea {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--dark);
+  transition: border-color var(--t);
+  outline: none;
+}
+input:focus, select:focus, textarea:focus { border-color: #aaa; }
+textarea { resize: vertical; min-height: 100px; }
+
+.btn-submit {
+  background: var(--dark);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--t);
+}
+.btn-submit:hover { background: #222; }
+
+/* --- WhatsApp Left Side Tab --- */
+.sticky-wa {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  background: var(--dark);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 4px 4px 0;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--white);
+  transition: background var(--t);
+  max-width: 48px;
+  white-space: nowrap;
+  /* Slide out on hover */
+  transition: max-width 0.35s ease, background 0.2s ease;
+}
+
+.sticky-wa:hover {
+  max-width: 180px;
+  background: var(--accent);
+  color: var(--dark);
+}
+
+.sticky-wa-icon {
+  width: 45px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.sticky-wa-text {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-right: 1rem;
+  font-family: var(--font-display);
+  white-space: nowrap;
+}
+
+/* Mobile — bottom bar */
+@media (max-width: 600px) {
+  .sticky-wa {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    max-width: 100%;
+    border-left: none;
+    border-top: 3px solid var(--accent);
+    border-radius: 0;
+    justify-content: center;
+    padding: 0.9rem;
+  }
+  .sticky-wa:hover { max-width: 100%; }
+  .sticky-wa-text { padding-right: 0; }
+  body { padding-bottom: 52px; }
+}
