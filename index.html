@@ -31,9 +31,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="base.css" />
-  <link rel="stylesheet" href="layout.css" />
-  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="base.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="layout.css" media="print" onload="this.media='all'" />
+  <link rel="stylesheet" href="components.css" media="print" onload="this.media='all'" />
 </head>
 <body>
 
@@ -322,7 +322,7 @@
   <p style="font-size:0.78rem; color:var(--muted);">Fast websites for local businesses across India.</p>
 </footer>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 
 </body>
 </html>
