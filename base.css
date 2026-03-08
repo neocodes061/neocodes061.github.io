@@ -55,34 +55,40 @@ img { max-width: 100%; display: block; }
 
 /* --- Shared section typography --- */
 .section-tag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.8rem;
-  display: block;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  background: rgba(232, 255, 71, 0.1);
+  border-radius: 4px;
 }
 
 .section-heading {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(2rem, 4vw, 3rem);
+  letter-spacing: -0.03em;
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .section-sub {
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.55);
-  max-width: 480px;
-  line-height: 1.6;
+  max-width: 520px;
+  line-height: 1.65;
 }
 
 /* Light section overrides */
-.light-section .section-tag  { color: #999; }
+.light-section .section-tag  { 
+  color: var(--dark); 
+  background: rgba(10, 10, 15, 0.08);
+}
 .light-section .section-sub  { color: #666; }
 .light-section .section-heading { color: var(--dark); }
 
@@ -95,4 +101,9 @@ img { max-width: 100%; display: block; }
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50%       { opacity: 0.4; transform: scale(1.4); }
+}
+
+@keyframes pulse2 {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(1.2); }
 }
