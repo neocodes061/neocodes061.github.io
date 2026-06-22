@@ -50,10 +50,18 @@
 </head>
 
 <body>
+<div class="mobile-nav" id="mobileNav">
+  <a href="#how-it-works">How It Works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#demos">Demos</a>
+  <a href="#about">About</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="mobile-cta">Get a Website →</a>
+</div>
 
 <!-- ===================== WHATSAPP LEFT TAB ===================== -->
 <a class="sticky-wa"
-   href="https://wa.me/919831756788?text=Hi%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20coaching%20centre."
+   href="https://wa.me/919831756788?text=Hi%2C%20I%27m%20interested%20in%20a%20website%20for%20my%20business."
    target="_blank"
    rel="noopener noreferrer"
    aria-label="Enquire on WhatsApp">
@@ -64,6 +72,16 @@
 <!-- ===================== NAVBAR ===================== -->
 <nav>
   <a href="#" class="logo">Neo<span>Codes</span> Launch</a>
+  <div class="nav-links" id="navLinks">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#demos">Demos</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
   <a href="#contact" class="nav-cta">Get a Website →</a>
 </nav>
 
@@ -72,8 +90,10 @@
   <div class="hero-grid-bg"></div>
   <div class="hero-glow"></div>
   <div class="hero-glow2"></div>
+  <div class="hero-code-bg" id="heroCodeBg"></div>
+  <div class="hero-cursor" id="heroCursor"></div>
   <div class="hero-content">
-    <div class="hero-eyebrow">Websites for Small Businesses in India</div>
+    <div class="hero-eyebrow"><span id="typewriter-text">Shops</span> in India need a website</div>
     <h1>
       Your customers are<br>
       searching <em>online.</em><br>
@@ -126,8 +146,8 @@
     </div>
     <div class="why-card">
       <div class="why-icon">⚡</div>
-      <h3>Loads in under 2 seconds</h3>
-      <p>No bloated WordPress. Pure hand-coded HTML — your site loads fast even on 4G connections.</p>
+      <h3>Pure HTML/CSS/JS — zero bloat</h3>
+      <p>No WordPress, no React, no frameworks. Hand-coded in pure HTML, CSS and vanilla JS — loads fast on any connection, cheap to host, nothing to break.</p>
     </div>
     <div class="why-card">
       <div class="why-icon">📍</div>
@@ -136,6 +156,11 @@
     </div>
   </div>
 </section>
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Shops</span><span class="mdot">·</span><span>Clinics</span><span class="mdot">·</span><span>Salons</span><span class="mdot">·</span><span>NGOs</span><span class="mdot">·</span><span>Restaurants</span><span class="mdot">·</span><span>Photographers</span><span class="mdot">·</span><span>CA Firms</span><span class="mdot">·</span><span>Gyms</span><span class="mdot">·</span><span>Travel Agents</span><span class="mdot">·</span><span>Coaching Centres</span><span class="mdot">·</span><span>Shops</span><span class="mdot">·</span><span>Clinics</span><span class="mdot">·</span><span>Salons</span><span class="mdot">·</span><span>NGOs</span><span class="mdot">·</span><span>Restaurants</span><span class="mdot">·</span><span>Photographers</span><span class="mdot">·</span><span>CA Firms</span><span class="mdot">·</span><span>Gyms</span><span class="mdot">·</span><span>Travel Agents</span><span class="mdot">·</span><span>Coaching Centres</span><span class="mdot">·</span>
+  </div>
+</div>
 
 <!-- ===================== HOW IT WORKS ===================== -->
 <section class="how-section" id="how-it-works">
@@ -173,7 +198,7 @@
     <div class="pricing-card">
       <div class="tier-name">Starter</div>
       <div class="price">₹2,999</div>
-      <div class="price-note">6 months free support, then ₹150/month</div>
+      <div class="price-note">3 months free support, then ₹150/month</div>
       <div class="price-divider"></div>
       <ul class="feature-list">
         <li>Single page website</li>
@@ -193,7 +218,7 @@
       <div class="badge">Most Popular</div>
       <div class="tier-name">Growth</div>
       <div class="price">₹5,999</div>
-      <div class="price-note">6 months free support, then ₹150/month</div>
+      <div class="price-note">3 months free support, then ₹300/month</div>
       <div class="price-divider"></div>
       <ul class="feature-list">
         <li>3–5 page website</li>
@@ -212,14 +237,14 @@
     <div class="pricing-card">
       <div class="tier-name">Authority</div>
       <div class="price">₹9,999</div>
-      <div class="price-note">6 months free support, then ₹150/month</div>
+      <div class="price-note">3 months free support, then ₹500/month</div>
       <div class="price-divider"></div>
       <ul class="feature-list">
         <li>6+ page website</li>
         <li>Everything in Growth</li>
         <li>Fee structure table</li>
         <li>Photo gallery</li>
-        <li>Static blog setup</li>
+        <li>Static blog setup (you send content, we publish)</li>
         <li>Google Analytics setup</li>
         <li>1 free content update per quarter</li>
         <li>Priority support</li>
@@ -229,6 +254,7 @@
     </div>
 
   </div>
+  <p class="pricing-disclaimer">All sites are static — no backend, no user logins, no payment gateways. Enquiries handled via WhatsApp or Google Forms. Payments via UPI / QR code.</p>
 
   <p class="annual-note">
     All prices are one-time. Client purchases their own domain. We handle setup and deployment.
@@ -239,10 +265,10 @@
 <section class="demos-section" id="demos">
   <div class="section-tag">Live demos</div>
   <div class="section-heading">See what we build</div>
-  <p class="section-sub">Real demos — open them on your phone, that's how your clients will see them.</p>
+  <p class="section-sub">Real demos across different business types — open on your phone, that's how your clients will see them.</p>
   <div class="demos-grid">
     <div class="demo-card">
-      <div class="demo-thumb">🎓</div>
+      <div class="demo-thumb"><div class="scan-line"></div>🎓</div>
       <div class="demo-info">
         <div class="demo-tier">Starter — Single Page</div>
         <h3>Roy Excellence Institute</h3>
@@ -251,7 +277,7 @@
       </div>
     </div>
     <div class="demo-card">
-      <div class="demo-thumb">🏥</div>
+      <div class="demo-thumb"><div class="scan-line"></div>🏥</div>
       <div class="demo-info">
         <div class="demo-tier">Starter — Single Page</div>
         <h3>BrightPath NEET Academy</h3>
@@ -260,7 +286,7 @@
       </div>
     </div>
     <div class="demo-card">
-      <div class="demo-thumb">🏆</div>
+      <div class="demo-thumb"><div class="scan-line"></div>🏆</div>
       <div class="demo-info">
         <div class="demo-tier">Growth — Multi Page</div>
         <h3>BrightPath NEET — Full Site</h3>
@@ -269,12 +295,41 @@
       </div>
     </div>
     <div class="demo-card">
-      <div class="demo-thumb">🛍️</div>
+      <div class="demo-thumb"><div class="scan-line"></div>🛍️</div>
       <div class="demo-info">
         <div class="demo-tier">Custom</div>
         <h3>Luxora Accessories</h3>
         <p>Multi-page product showcase for an accessories brand. Shows we build beyond coaching centres too.</p>
         <a href="https://neocodes061.github.io/shopping-demo" target="_blank" rel="noopener" class="demo-link">View Live Demo →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-section" id="about">
+  <div class="section-tag">About</div>
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-heading">Built for local businesses that need a fast, professional website</div>
+      <p class="section-sub">NeoCodes Launch is a solo web development service based in West Bengal, India. Every website is hand-coded in pure HTML, CSS and JavaScript — no frameworks, no page builders.</p>
+      <p class="about-body">The goal is simple: deliver clean, fast websites for small businesses without costly monthly software, bloated CMS, or unnecessary booking systems. Enquiries stay easy through WhatsApp, Google Forms or static contact links, and content updates are handled manually so your site stays simple and reliable.</p>
+    </div>
+    <div class="about-cards">
+      <div class="about-card">
+        <h3>No Frameworks</h3>
+        <p>Faster loading, lower hosting cost, and less to maintain. Pure static sites built for speed and reliability.</p>
+      </div>
+      <div class="about-card">
+        <h3>Professional, not heavy</h3>
+        <p>Mobile-first design that looks trustworthy on any screen, without adding unnecessary complexity.</p>
+      </div>
+      <div class="about-card">
+        <h3>Simple enquiry flow</h3>
+        <p>No built-in booking systems. Enquiries work through WhatsApp, Google Forms, or static contact links.</p>
+      </div>
+      <div class="about-card">
+        <h3>Static blog posts</h3>
+        <p>Need updates? We can publish static blog pages without adding backend complexity.</p>
       </div>
     </div>
   </div>
